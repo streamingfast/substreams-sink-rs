@@ -14,13 +14,13 @@
 - Commit everything with message `Preparing release of ${version}`.
 - `./bin/release.sh -f v${version}`
 - If everything goes well, `crates.io` will be update and Git should be in a synced state (the release script does a `git push` of the branch and the tag).
-- Go to https://github.com/streamingfast/substreams-ethereum/releases and edit the draft release named `v${version}`.
+- Go to https://github.com/streamingfast/substreams-sink-rs/releases and edit the draft release named `v${version}`.
 - Update the release notes, use content of section `## [v${version}]` in [CHANGELOG.md](CHANGELOG.md), edit GitHub release and paste content before commits listing, keep both:
 
   ```
   ## Changelog
 
-  <Content from 'docs/release-notes/change-log.md' here>
+  <Content from 'CHANGELOG.md' here>
 
   ### Commits
 
@@ -31,8 +31,6 @@
 - Update the [CHANGELOG.md](CHANGELOG.md) adding `## Next` header on top of latest released section.
 - Commit everything with message `Preparing next version`.
 - Git push again (`git push origin develop`)
-
-You can then update the https://github.com/streamingfast/substreams-template with the latest.
 
 ## Community
 
