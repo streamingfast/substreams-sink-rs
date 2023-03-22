@@ -1,0 +1,9 @@
+[workspace]
+members = [
+    "substreams-sink-kv"
+]
+
+[profile.release]
+lto = true
+opt-level = 's'
+strip = "debuginfo"
