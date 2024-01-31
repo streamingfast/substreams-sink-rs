@@ -8,7 +8,7 @@ to a kv store.
 ```rust
 // lib.rs
 
-use substreams_sink_kv::pb::kv::KvOperations;
+use substreams_sink_kv::pb::sf::substreams::sink::kv::v1::KvOperations;
 
 ...
 
