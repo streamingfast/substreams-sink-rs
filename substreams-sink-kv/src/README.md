@@ -8,15 +8,15 @@ to a kv store.
 ```rust
 // lib.rs
 
-use substreams_sink_kv::pb::sf::substreams::sink::kv::v1::KvOperations;
+use substreams_sink_kv::pb::sf::substreams::sink::kv::v1::KVOperations;
 
 ...
 
 pub fn kv_out(
     ... some stores ...
-) -> Result<KvOperations, Error> {
+) -> Result<KVOperations, Error> {
 
-    let mut kv_ops: KvOperations = Default::default();
+    let mut kv_ops: KVOperations = Default::default();
 
     // process your data, push to your KV
     kv_ops.push_new(someKey, someValue, ordinal);
