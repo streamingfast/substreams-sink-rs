@@ -31,7 +31,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
   provides it under `env`; a Substreams module gets the working equivalent from
   `substreams::register_panic_hook()`.
 
-- The minimum supported Rust version is now 1.93, matching `substreams` 0.8.0.
+- The toolchain is pinned to 1.93 in `rust-toolchain.toml` and the stale `rust-version = "1.60"` is
+  dropped.
 
 - Releases are driven by [sfreleaser](https://github.com/streamingfast/sfreleaser), as in every other
   Rust crate in the organisation, replacing `bin/release.sh`.
