@@ -1,0 +1,17 @@
+version: v2
+modules:
+  - path: proto
+    name: buf.build/streamingfast/substreams-sink-kv
+    lint:
+      use:
+        - STANDARD
+      # KVOperation.Type keeps its historical value names: published .spkg files
+      # and the Go sink reference UNSET, SET and DELETE.
+      ignore_only:
+        ENUM_VALUE_PREFIX:
+          - proto/sf/substreams/sink/kv/v1/kv.proto
+        ENUM_ZERO_VALUE_SUFFIX:
+          - proto/sf/substreams/sink/kv/v1/kv.proto
+    breaking:
+      use:
+        - FILE
